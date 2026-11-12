@@ -1,0 +1,3 @@
+# RAG from scratch: dependencies are added module by module, only when needed
+python-dotenv>=1.0.0
+pydantic-settings>=2.2.0
