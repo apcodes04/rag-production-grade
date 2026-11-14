@@ -387,6 +387,11 @@ export function AskPage({ thread, setThread, health, documentCount, selected, go
                 Each answer cites the chunk it used, and the panel on the right
                 fills with the real timings for it.
               </p>
+              <p className="mt-2 text-sm text-on-violet/70">
+                Running on free-tier hosting: if it has been idle, the first
+                answer can take up to a minute while the server wakes up,
+                that is the infrastructure, not the pipeline.
+              </p>
             </div>
           )}
           {thread.map((exchange, i) => <Bubble key={i} exchange={exchange} />)}
@@ -402,9 +407,14 @@ export function AskPage({ thread, setThread, health, documentCount, selected, go
           {busy && (
             <div className="flex items-end gap-2">
               <BotAvatar />
-              <p className="animate-pulse rounded-3xl rounded-bl-lg border-2 border-line px-5 py-3 text-base text-ink-soft">
-                Retrieving and reading the chunks...
-              </p>
+              <div className="rounded-3xl rounded-bl-lg border-2 border-line px-5 py-3">
+                <p className="animate-pulse text-base text-ink-soft">
+                  Retrieving and reading the chunks...
+                </p>
+                <p className="mt-1 text-xs text-ink-soft/70">
+                  Free-tier host: a cold start can add up to a minute here.
+                </p>
+              </div>
             </div>
           )}
           <div ref={bottom} />

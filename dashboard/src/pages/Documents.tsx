@@ -130,6 +130,13 @@ export function DocumentsPage({ onIndexChanged, goToAsk, selected, setSelected }
             Deleted when you close this tab.
           </p>
 
+          <p className="mt-2 text-center text-xs text-ink-soft/80 lg:text-left">
+            <span className="font-bold text-ink">Hosted free. </span>
+            The backend sleeps after idle time and can take up to a minute to
+            wake on the first request, that delay is the hosting tier, not
+            the retrieval pipeline.
+          </p>
+
           {full && (
             <p className="mt-2 text-center text-sm font-semibold text-ember lg:text-left">
               Limit is {limits?.max_documents} documents. Delete one first.

@@ -83,22 +83,6 @@ export function Stat({ label, value, suffix = "", good, explain }: {
   );
 }
 
-const META_TONES = {
-  chunks: "bg-sel/15 text-sel",
-  tokens: "bg-brand/15 text-brand",
-  pages: "bg-spot text-on-spot",
-  size: "bg-line/40 text-ink-soft",
-} as const;
-
-export function Meta({ kind, children }: {
-  kind: keyof typeof META_TONES; children: ReactNode;
-}) {
-  return (
-    <span className={`rounded-md px-2 py-0.5 text-xs font-bold tabular-nums ${META_TONES[kind]}`}>
-      {children}
-    </span>
-  );
-}
 
 export function Pill({ children, tone = "neutral" }: {
   children: ReactNode; tone?: "neutral" | "good" | "bad" | "warn" | "lime";

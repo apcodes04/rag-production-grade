@@ -11,10 +11,6 @@ class RagError(Exception):
     """Base class. Catch this at the edge of the app."""
 
 
-class ConfigError(RagError):
-    """Settings are wrong or missing. Fail at startup, never mid request."""
-
-
 class ProviderError(RagError):
     """An external model API failed in a way we should not retry."""
 
