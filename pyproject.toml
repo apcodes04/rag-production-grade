@@ -1,0 +1,26 @@
+[project]
+name = "rag-from-scratch"
+version = "1.0.0"
+description = "Production grade hybrid RAG, built module by module"
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+# E501: line length is handled by the formatter.
+# SIM905: the stopword list is far more readable as one block of words.
+ignore = ["E501", "SIM905"]
+
+[tool.ruff.lint.flake8-bugbear]
+# FastAPI's dependency injection REQUIRES these calls in argument defaults.
+# That is the framework's documented idiom, not the mutable-default bug B008
+# is looking for.
+extend-immutable-calls = ["fastapi.Depends", "fastapi.File", "fastapi.Query",
+                          "fastapi.Header", "fastapi.Form", "fastapi.Body"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

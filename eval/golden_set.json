@@ -1,0 +1,177 @@
+{
+  "corpus": "AI_QnA_Guide_Extended.pdf",
+  "note": "evidence_phrase is an exact string from the document. A retrieved chunk counts as relevant when it contains that phrase, so these labels survive re-chunking and re-embedding. must_include are words a correct answer should mention. Out of scope questions include deliberately HARD negatives: AI topics that sound like the corpus but are not in it. Easy negatives (football, capital cities) make a refusal threshold look better than it is.",
+  "questions": [
+    {
+      "id": "q01",
+      "question": "What are the three types of AI?",
+      "evidence_phrase": "surpasses human intelligence",
+      "must_include": [
+        "narrow",
+        "general",
+        "super"
+      ]
+    },
+    {
+      "id": "q02",
+      "question": "How is deep learning different from traditional machine learning?",
+      "evidence_phrase": "automatically extracts features",
+      "must_include": [
+        "feature",
+        "layer"
+      ]
+    },
+    {
+      "id": "q03",
+      "question": "Which metrics are used to evaluate AI models?",
+      "evidence_phrase": "ROC-AUC",
+      "must_include": [
+        "precision",
+        "recall",
+        "F1"
+      ]
+    },
+    {
+      "id": "q04",
+      "question": "Which programming language is most commonly used in AI and why?",
+      "evidence_phrase": "Python is the most commonly used language",
+      "must_include": [
+        "Python",
+        "librar"
+      ]
+    },
+    {
+      "id": "q05",
+      "question": "Which techniques are part of NLP?",
+      "evidence_phrase": "named entity recognition",
+      "must_include": [
+        "tokenization",
+        "sentiment"
+      ]
+    },
+    {
+      "id": "q06",
+      "question": "How can bias in AI systems be reduced?",
+      "evidence_phrase": "fairness-aware algorithms",
+      "must_include": [
+        "diverse",
+        "audit"
+      ]
+    },
+    {
+      "id": "q07",
+      "question": "What are the security risks when deploying AI?",
+      "evidence_phrase": "data poisoning",
+      "must_include": [
+        "adversarial",
+        "model theft"
+      ]
+    },
+    {
+      "id": "q08",
+      "question": "Which AI regulations are mentioned in the guide?",
+      "evidence_phrase": "EU AI Act",
+      "must_include": [
+        "GDPR",
+        "HIPAA"
+      ]
+    },
+    {
+      "id": "q09",
+      "question": "What does data preprocessing involve?",
+      "evidence_phrase": "encoding categorical variables",
+      "must_include": [
+        "missing values",
+        "normalization"
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "What tasks does computer vision cover?",
+      "evidence_phrase": "image segmentation",
+      "must_include": [
+        "object detection",
+        "facial recognition"
+      ]
+    },
+    {
+      "id": "q11",
+      "question": "Which cloud platforms provide AI services?",
+      "evidence_phrase": "AWS SageMaker",
+      "must_include": [
+        "Google Cloud",
+        "Azure"
+      ]
+    },
+    {
+      "id": "q12",
+      "question": "What is the refund policy for enterprise customers?",
+      "evidence_phrase": "",
+      "must_include": [],
+      "expect_refusal": true
+    },
+    {
+      "id": "q13",
+      "question": "Who is the current CEO of OpenAI?",
+      "evidence_phrase": "",
+      "must_include": [],
+      "expect_refusal": true
+    },
+    {
+      "id": "q14",
+      "question": "How do I fine-tune a model using LoRA adapters?",
+      "evidence_phrase": "",
+      "must_include": [],
+      "expect_refusal": true
+    },
+    {
+      "id": "q15",
+      "question": "Which GPU should I buy for training a 7B parameter model?",
+      "evidence_phrase": "",
+      "must_include": [],
+      "expect_refusal": true
+    },
+    {
+      "id": "q16",
+      "question": "What is the pricing of the OpenAI API per million tokens?",
+      "evidence_phrase": "",
+      "must_include": [],
+      "expect_refusal": true
+    },
+    {
+      "id": "q17",
+      "question": "How do I deploy a model to Kubernetes with autoscaling?",
+      "evidence_phrase": "",
+      "must_include": [],
+      "expect_refusal": true
+    },
+    {
+      "id": "q18",
+      "question": "What is retrieval augmented generation and how do I build it?",
+      "evidence_phrase": "",
+      "must_include": [],
+      "expect_refusal": true
+    },
+    {
+      "id": "q19",
+      "question": "Who wrote this guide and when was it last updated?",
+      "evidence_phrase": "",
+      "must_include": [],
+      "expect_refusal": true
+    },
+    {
+      "id": "q20",
+      "question": "What accuracy did our fraud detection model reach last quarter?",
+      "evidence_phrase": "",
+      "must_include": [],
+      "expect_refusal": true
+    },
+    {
+      "id": "q21",
+      "question": "How do I reset my account password?",
+      "evidence_phrase": "",
+      "must_include": [],
+      "expect_refusal": true
+    }
+  ]
+}

@@ -1,5 +1,24 @@
 .env
 .venv/
-.index/
-.cache/
 __pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+data/index/
+data/cache/
+
+# Whatever visitors upload to the live demo. The seed corpus in data/raw/ is
+# committed; this folder is not, so a public endpoint can never add to the repo.
+data/uploads/
+
+# Evaluation reports ARE committed. They are the evidence that the quality
+# numbers in the README are measured rather than claimed, and the deployed
+# demo reads them to render its Evaluation page. They are small JSON and
+# contain no secrets.
+# eval/reports/
+
+# Documents that are mine rather than demo material: never published.
+data/private/
+.coverage*
+.local-artifacts/
+htmlcov/
